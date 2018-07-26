@@ -34,4 +34,14 @@
     <servlet-name>Home</servlet-name>
     <url-pattern>/home</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Logot</display-name>
+    <servlet-name>Logot</servlet-name>
+    <servlet-class>makemyportfolio.controller.Logot</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Logot</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
 </web-app>

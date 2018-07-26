@@ -21,8 +21,12 @@
    </div>
    
    <div class="main-content">
-    
-   ${requestScope.message }   
+   ${requestScope.message }
+   ${applicationScope.lomsg }
+ 	 
+   <%
+   application.removeAttribute("lomsg"); 
+   %>
 
      <!--  posts -->
 

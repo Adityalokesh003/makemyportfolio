@@ -20,7 +20,7 @@
 					href="includes/index.jsp">Home<span class="sr-only">(current)</span></a></li>
 				<li class="nav-item"><a class="nav-link" href="#">Projects</a>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="#">Connect</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Connect</li>
 
 			</ul>
 			<form class="form-inline">
@@ -33,7 +33,7 @@
 			<%
 			User user =  (User)session.getAttribute("user");
 			if(user!=null){%>
-				<li class="nav-item"><a class="nav-link" href="#">${ sessionScope.user.name}</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">${ sessionScope.user.user_name}</a></li>
 				<li class="nav-item"><a class="nav-link" href="logout">Log Out</a></li>
 				<%}else{ %>
 				<li class="nav-item"><a class="nav-link" href="signup">Sign Up</a></li>

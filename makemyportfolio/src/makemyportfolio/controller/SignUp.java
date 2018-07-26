@@ -34,7 +34,7 @@ public class SignUp extends HttpServlet {
 		boolean isSignedUp = userDao.signup(user_name, password);
 		if(isSignedUp){
 			String message = "<p class='alert alert-success'>congradulations " + user_name+"! You are succesfully signed up</p>";
-			HttpSession session = request.getSession();
+			HttpSession session = request.getSession(true);
 			User user = userDao.getByUsername(user_name);
 			session.setAttribute("user", user);
 			session.setAttribute("message",message );

@@ -34,7 +34,7 @@ public class Login extends HttpServlet {
 		boolean isLoggedIn = userDao.login(user_name, password);
 		if(isLoggedIn){
 			String message = "<p class='alert alert-success'>congradulations " + user_name+"! You are succesfully logged in</p>";
-			HttpSession session = request.getSession();
+			HttpSession session = request.getSession(true);
 			User user = userDao.getByUsername(user_name);
 			session.setAttribute("user", user);
 			session.setAttribute("message",message );

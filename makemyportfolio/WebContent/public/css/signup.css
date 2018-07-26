@@ -1,0 +1,49 @@
+ 
+ body {
+ 	background:#c1bdba;
+ }
+ #signup-box {
+ margin: 100px 100px 20px 100px ;
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ align-items: center;
+ padding: 25px;
+ height: 500px;
+ background:#292F33;
+ background-size: cover;
+ background-position: center ;
+ }
+ #signup-box h1{
+	color: #fff;
+	margin-bottom: 15px;
+	align-self: stretch;
+	text-align: center;
+	background:  #008B8B;
+ }
+ #signup{
+	flex-basis: 80%;
+	width: 500px;
+	padding: 50px ;
+	color: #fff;
+	transform: scale(1.15);
+}
+
+#signup input, #signup-submit{
+	font-size: 1.35em;
+
+}
+#signup-submit{
+background:  #008B8B;
+border: none;
+opacity: 0.9;
+}
+#signup-submit:hover {
+	opacity: 1;
+}
+.error_message {
+	color: red;  
+}
+.success_message{
+	color: green;  
+}

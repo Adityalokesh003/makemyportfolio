@@ -12,19 +12,15 @@ import javax.servlet.http.HttpSession;
  * Servlet implementation class Home
  */
 public class Home extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		 
-		HttpSession session = request.getSession();
-		request.setAttribute("message", session.getAttribute("message"));
-		session.removeAttribute("message");
-		System.out.println("1");
+
+		HttpSession session = request.getSession(false);
+		//System.out.println(session);
+		if(session!=null){
+				request.setAttribute("message", session.getAttribute("message"));
+				session.removeAttribute("message");
+		}
 		request.getRequestDispatcher("/WEB-INF/views/index.jsp").forward(request, response);
-		System.out.println("2");
 	}
 
 }
