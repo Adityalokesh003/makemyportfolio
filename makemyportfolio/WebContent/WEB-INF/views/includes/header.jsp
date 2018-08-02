@@ -13,5 +13,6 @@
 	crossorigin="anonymous">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/public/css/styles.css">
+
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/public/css/signup.css">
+	href="${pageContext.request.contextPath}/public/css/index.css">

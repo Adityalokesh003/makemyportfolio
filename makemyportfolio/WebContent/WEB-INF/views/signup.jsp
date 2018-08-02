@@ -1,24 +1,40 @@
 
 <%@include file="includes/header.jsp"%>
-<%@include file="includes/navbar.jsp"%>
-<div id="signup-box" class="container">
-	<h1>Sign Up for free</h1>
-	<form action="signup" method="post" id="signup"
-		onsubmit="return validator()">
-		<p class='error_message'>${requestScope.error_message }</p>  
-		<div class="form-group">
-			<label for="user_name">User name *</label> <input type="text"
-				name="user_name" class="form-control" id="user_name" required autocomplete="off">
-		</div>
-		<div class="form-group">
-			<label for="password">Password *</label> <input type="password"
-				name="password" class="form-control" id="password" required autocomplete="off">
-		</div>
-		<br>
-		<div class="form-group">
-			<button class="btn btn-primary btn-lg btn-block" id="signup-submit">Sign
-				Up</button>  
-		</div>
-	</form>
-</div>
-<%@include file="includes/footer.jsp"%>
+<link rel="stylesheet"
+href="${pageContext.request.contextPath}/public/css/signup.css">
+</head>
+<body>
+	<div class="sign-bg">
+	</div>
+	<div id="signup-box">
+		<h1>Sign Up for free</h1>
+		<form action="signup" method="post" onsubmit="return validator()" id="signup-form">
+
+			<div class="input-container">
+				<p class='error_message'>${requestScope.error_message }</p>
+				<label for="user_name"><b>Username *</b></b></label>
+				<input type="text"
+				placeholder="Enter Username" name="user_name" required autocomplete="off">
+				<label for="psw"><b>Password *</b></label> 
+				<input type="password" placeholder="Enter Password" name="password" required autocomplete="off"> 
+
+				<input type="submit" class="singup-submit" value="Sign Up">
+
+			</div>
+			<div class="input-container"> 
+
+				<span class="psw">Already have an account?<a href="login">Login</a></span>
+				<button   onClick="window.history.back()" class="btn btn-primary cancelbtn">Cancel</button>
+			</div>
+
+		</form>
+		
+
+	</div>
+
+
+
+
+
+
+	<%@include file="includes/footer.jsp"%>

@@ -44,4 +44,14 @@
     <servlet-name>Logot</servlet-name>
     <url-pattern>/logout</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ViewProfile</display-name>
+    <servlet-name>ViewProfile</servlet-name>
+    <servlet-class>makemyportfolio.controller.ViewProfile</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewProfile</servlet-name>
+    <url-pattern>/profile</url-pattern>
+  </servlet-mapping>
 </web-app>

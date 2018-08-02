@@ -1,27 +1,126 @@
- 
  body {
- 	background:#c1bdba;
+ max-width: 100%;
+ overflow-x:hiddden;
+ }
+ .sign-bg {
+ 	 background:url("./../../images/pexels-photo-887866.jpeg");
+ 	 background-size: cover;
+ 	 background-position:center;
+ 	 box-sizing: border-box;
+ 	 height: 100vh;
+ 	 width:100vw;
+ 	 margin-top: -60px;
+ 	 margin-bottom: -50px;
+ 	 filter:contrast(60%);
+ 	 z-index:-1;
+ 	 position: fixed; 
  }
  #signup-box {
- margin: 100px 100px 20px 100px ;
  display: flex;
  flex-direction: column;
  justify-content: flex-start;
  align-items: center;
- padding: 25px;
+ padding-bottom: 25px;
  height: 500px;
- background:#292F33;
- background-size: cover;
- background-position: center ;
+ margin: 60px 200px 20px 200px;
+ background:transparent;
+ z-index:1;
  }
  #signup-box h1{
-	color: #fff;
-	margin-bottom: 15px;
+	color:  #04063c;
 	align-self: stretch;
+	margin-bottom: 35px;
 	text-align: center;
-	background:  #008B8B;
+	/* background:  #008B8B; */
  }
- #signup{
+ 
+ 
+ 
+#signup-form {
+	padding: 10px 150px 50px 150px;
+	display: flex;
+	flex-direction:column;
+	
+}
+.input-container {
+	flex: 1 3 400px;
+}
+#signup-form label{
+	font-size: 1.35em;
+	color: #1925bb;
+	font-weight: bold;
+}
+
+#signup-form input[type=text], input[type=password] {
+    width: 400px;
+    padding: 6px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1.35em;
+     
+}
+
+.singup-submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.35em;
+     
+}
+.singup-submit:hover{
+	background:  #3B5998;
+	transition: background 0.4s;
+}
+.cancelbtn {
+	 
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    border: none;
+    cursor: pointer;
+    opacity:0.9;
+    margin-top: 20px;
+}
+.cancelbtn:hover{
+	opacity:1;
+}
+  
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+span.psw a{
+	color: #00477e;
+	font-weight: bolder;
+	opacity:1;
+}
+
+.error_message {
+	color: red; 
+	font-size: 1.3em;
+	font-weight: bold; 
+}
+.success_message{
+	color: green;  
+}
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+     
+}
+ /* #signup{
 	flex-basis: 80%;
 	width: 500px;
 	padding: 50px ;
@@ -47,3 +146,4 @@ opacity: 0.9;
 .success_message{
 	color: green;  
 }
+ */

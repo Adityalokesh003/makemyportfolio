@@ -48,9 +48,9 @@ a:hover {
   color:#ffd;
   font-weight: 500;
 }
-.navbar-fixed-top {
-	min-height:50px;
-  z-index: -1;
+#navbar {
+  	transition: top 0.4s;
+  	top: 0px;
 }
 .navbar-dark .navbar-nav .nav-link {
 	padding: 0px;
@@ -75,7 +75,52 @@ a:hover {
 	padding-left: 9px; 
 }
 
+/*profile side bar in navbar styling*/
+.sidenav {
+    height: 250px;
+    width: 0;
+    position: absolute;
+    z-index: 5;
+    top: 20px;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.2s;
+    padding-top: 60px;
+}
 
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#mySidenav .username {
+	color: #fff;
+	padding: 8px 8px 8px 32px;
+	font-size: 28px;
+	
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 
 @media only screen and (max-width:991px)  {
 .big-search {
@@ -151,6 +196,7 @@ a:hover {
 /*style of index page*/
 
 #footer {
+  margin-top: 90px;
   z-index: 3;
   flex: 1 0 150px;
   background: grey;

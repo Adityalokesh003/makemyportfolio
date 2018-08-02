@@ -4,7 +4,7 @@
 <body>
 	 
 	<nav
-		class="navbar navbar-expand-lg fixed-top navbar-dark navigation-bg">
+		class="navbar navbar-expand-lg fixed-top navbar-dark navigation-bg" id="navbar">
 		
 
 		<a class="navbar-brand" href="/makemyportfolio">MakeMyPortfolio</a>
@@ -36,15 +36,19 @@
 				<%
 					User user = (User) session.getAttribute("user");
 					if (user != null) {
+						
+						 
+						 
 				%>
 				<li class="nav-item"><a class="nav-link" href="#"><span
 						style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776;
-							${ sessionScope.user.user_name}</span></a></li>
+							  Profile
+							</span></a></li>
 				
 				<div id="mySidenav" class="sidenav">
 					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> 
-					<a href="#">About</a> <a href="#">Services</a> 
-					<a href="#">Clients</a> <a href="#">Contact</a>
+					<p class="username">${sessionScope.user.user_name }</p>>
+					<a href="profile">View Profile</a> 
 				    <a href="logout">Log Out</a>
 				</div>
 				<%

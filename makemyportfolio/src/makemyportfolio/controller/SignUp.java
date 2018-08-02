@@ -11,12 +11,9 @@ import javax.servlet.http.HttpSession;
 import makemyportfolio.bo.User;
 import makemyportfolio.dao.UserDao;
 import makemyportfolio.dao.daofactory.UserDaoFactory;
-import jdk.nashorn.internal.ir.RuntimeNode.Request;
-
-/**
- * Servlet implementation class SignUp
- */
+ 
 public class SignUp extends HttpServlet {
+	public static final long SerialVersionUID=1L;
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -41,7 +38,7 @@ public class SignUp extends HttpServlet {
 			
 			response.sendRedirect("home");
 		}else{
-			request.setAttribute("error_message", "username"+user_name+ "already exists");
+			request.setAttribute("error_message", "username "+user_name+ " already exists");
 			request.getRequestDispatcher("/WEB-INF/views/signup.jsp").forward(request, response);
 		}
 		

@@ -1,11 +1,7 @@
 
 <%@include file="includes/header.jsp"%>
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/public/css/index.css">
 <%@include file="includes/navbar.jsp"%>
- 
 
-<br><br><br><br><br><br>
 ${requestScope.message } ${applicationScope.lomsg }
 <%
 application.removeAttribute("lomsg"); 

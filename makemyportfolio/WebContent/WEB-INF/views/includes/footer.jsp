@@ -123,14 +123,6 @@
 	integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
 	crossorigin="anonymous"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/public/js/signup_validator.js"></script>
-	<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-</script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/public/js/navbar_effects.js"></script>
 </body>
 </html>
