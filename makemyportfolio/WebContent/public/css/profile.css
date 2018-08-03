@@ -1,0 +1,194 @@
+body {
+	background: none;
+}
+
+.profile-sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #008B8B;
+    opacity:0.8;
+    overflow-x: hidden;
+    padding-top: 78px;
+    padding-bottom: 35px;
+     
+}
+
+/* Style the sidenav links and the dropdown button */
+.profile-sidenav a, .dropdown-btn {
+    padding: 12px 8px 12px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    background: #00b9b9;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+/* On mouse-over */
+.profile-sidenav a:hover, .dropdown-btn:hover {
+    color: #f1f1f1;
+}
+ 
+
+
+/* Add an active class to the active dropdown button */
+.profile-active {
+    background-color: green;
+    color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 0px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+    .profile-sidenav {padding-top: 15px;}
+    .profile-sidenav a {font-size: 18px;}
+}
+
+
+
+
+/* Main content */
+.profile-main {
+    margin: 20px 0 0 250px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 5px 5px;
+    min-height: 490px;
+    display: flex;
+    justify-content:space-around;
+     
+}
+
+.profile-details {
+    flex:1 2 60%;
+    padding-left: 30px;
+    display: inline-block;
+    width: 60%;
+    height: 600px;
+    
+}
+.profile-main  .form-group  input[type='text'] {
+	border: 2px solid #ccc;
+    border-radius: 4px;
+    text-align:left;
+    background-color: #f8f8f8;
+}
+ 
+.profile-main .form-group textarea[id='about_you'] {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    text-align:left;
+    background-color: #f8f8f8;
+    resize: none;
+}
+.profile-heading {
+	margin-left:250px;
+	margin-top:100px;
+	font-size: 1.3em;
+	font-weight: bolder;
+	padding-left: 30px;
+}
+.profile-picture{
+    flex:1 0 30%;
+    display: inline-block;
+    width: 30%;
+    height: 600px;
+    z-index: 0;
+     
+}
+.profile-picture .img-responsive {
+	width: 290px;
+	height: 350px;
+    border-radius: 8px;
+}
+
+.picture-box {
+    
+    z-index: 1;
+    height: 350px;
+
+}
+.picture-box .button-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  	margin-top: 20px;
+    
+}
+
+.picture-box .button-wrapper .button {
+	border:2px solid black;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    width: 290px;
+    cursor: pointer;
+    background: #f8f8f8;
+}
+ 
+.picture-box .button-wrapper input[type=file]{
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+@media screen and (max-width: 1000px){
+	.profile-main {
+	display: flex;
+	flex-direction:column;
+	justify-content: flex-start;
+    height: 100%;
+	}
+    .profile-picture{
+    	width: 100%;
+    	padding: 30px;
+        order: 1;
+        margin: 20px;
+        height: 450px;
+    }
+	.profile-details{
+		 
+		width: 100%;
+		padding: 30px;
+        order: 2;
+        height: 450px;
+        
+    }
+    .profile-heading {
+    margin-left:250px;
+    margin-top:100px;
+    font-size: 1.3em;
+    font-weight: bolder;
+    padding-left: 30px;
+    width: 65vw;
+    }
+}
+#footer {
+  margin-left:250px;
+   
+   
+}

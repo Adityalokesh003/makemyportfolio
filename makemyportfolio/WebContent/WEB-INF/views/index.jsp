@@ -19,13 +19,5 @@ application.removeAttribute("lomsg");
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo tempore, quia deleniti cum incidunt aspernatur natus dicta molestiae nesciunt iure adipisci, non fugit perferendis, accusantium.</p>
 </div>
 
-
-
  
- 
-		 
-		 
-	 
-
-
 <%@include file="includes/footer.jsp"%>

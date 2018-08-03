@@ -2,6 +2,7 @@
 <%@include file="includes/header.jsp"%>
 <link rel="stylesheet"
 href="${pageContext.request.contextPath}/public/css/signup.css">
+<script type="text/javascript" src="${pageContext.request.contextPath}/public/js/signup_validator.js"></script>
 </head>
 <body>
 	<div class="sign-bg">
