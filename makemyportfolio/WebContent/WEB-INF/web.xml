@@ -48,10 +48,100 @@
     <description></description>
     <display-name>ViewProfile</display-name>
     <servlet-name>ViewProfile</servlet-name>
-    <servlet-class>makemyportfolio.controller.ViewProfile</servlet-class>
+    <servlet-class>makemyportfolio.controller.profile.ViewProfile</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ViewProfile</servlet-name>
     <url-pattern>/profile</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EditProfile</display-name>
+    <servlet-name>EditProfile</servlet-name>
+    <servlet-class>makemyportfolio.controller.profile.EditProfile</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditProfile</servlet-name>
+    <url-pattern>/profile/edit</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ViewPortfolio</display-name>
+    <servlet-name>ViewPortfolio</servlet-name>
+    <servlet-class>makemyportfolio.controller.portfolio.ViewPortfolio</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewPortfolio</servlet-name>
+    <url-pattern>/portfolio</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Portfolio</display-name>
+    <servlet-name>Portfolio</servlet-name>
+    <servlet-class>makemyportfolio.controller.portfolio.Portfolio</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Portfolio</servlet-name>
+    <url-pattern>/portfolio/portfolio_full</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EditPortfolio</display-name>
+    <servlet-name>EditPortfolio</servlet-name>
+    <servlet-class>makemyportfolio.controller.portfolio.EditPortfolio</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditPortfolio</servlet-name>
+    <url-pattern>/portfolio/edit</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddPortfolio</display-name>
+    <servlet-name>AddPortfolio</servlet-name>
+    <servlet-class>makemyportfolio.controller.portfolio.AddPortfolio</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddPortfolio</servlet-name>
+    <url-pattern>/portfolio/new</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EditProject</display-name>
+    <servlet-name>EditProject</servlet-name>
+    <servlet-class>makemyportfolio.controller.project.EditProject</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditProject</servlet-name>
+    <url-pattern>/profile/project/edit</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ViewProject</display-name>
+    <servlet-name>ViewProject</servlet-name>
+    <servlet-class>makemyportfolio.controller.project.ViewProject</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewProject</servlet-name>
+    <url-pattern>/profile/project</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddProject</display-name>
+    <servlet-name>AddProject</servlet-name>
+    <servlet-class>makemyportfolio.controller.project.AddProject</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddProject</servlet-name>
+    <url-pattern>/profile/project/new</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddProfile</display-name>
+    <servlet-name>AddProfile</servlet-name>
+    <servlet-class>makemyportfolio.controller.profile.AddProfile</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddProfile</servlet-name>
+    <url-pattern>/profile/new</url-pattern>
   </servlet-mapping>
 </web-app>

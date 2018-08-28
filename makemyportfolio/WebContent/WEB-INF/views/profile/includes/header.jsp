@@ -1,11 +1,10 @@
- <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+
  
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Make My Portifolio</title>
+<title>Make My Portifolio - Aditya Surabattula</title>
 
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
@@ -17,6 +16,4 @@
 <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/public/css/styles.css">
-
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/public/css/index.css">
+ 

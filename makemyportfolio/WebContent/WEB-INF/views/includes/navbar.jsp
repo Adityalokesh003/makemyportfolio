@@ -18,11 +18,11 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 
 			<ul class=" navbar-nav  navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="home">Home<span
+				<li class="nav-item active"><a class="nav-link" href="/makemyportfolio/home">Home<span
 						class="sr-only">(current)</span></a></li>
 				<li class="nav-item"><a class="nav-link" href="#">Projects</a>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="#">Connect</li>
+				<li class="nav-item"><a class="nav-link" href="#">Connect</a></li>
 
 			</ul>
 			<form class="form-inline">
@@ -48,15 +48,15 @@
 				<div id="mySidenav" class="sidenav">
 					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> 
 					<p class="username">${sessionScope.user.user_name }</p>>
-					<a href="profile">View Profile</a> 
-				    <a href="logout">Log Out</a>
+					<a href="/makemyportfolio/profile">View Profile</a> 
+				    <a href="/makemyportfolio/logout">Log Out</a>
 				</div>
 				<%
 					} else {
 				%>
-				<li class="nav-item"><a class="nav-link" href="signup">Sign
+				<li class="nav-item"><a class="nav-link" href="/makemyportfolio/signup">Sign
 						Up</a></li>
-				<li class="nav-item"><a class="nav-link" href="login">Log
+				<li class="nav-item"><a class="nav-link" href="/makemyportfolio/login">Log
 						In</a></li>
 				<%
 					}

@@ -1,4 +1,4 @@
-package makemyportfolio.controller;
+package makemyportfolio.controller.profile;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

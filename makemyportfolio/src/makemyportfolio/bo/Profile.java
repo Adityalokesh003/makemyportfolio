@@ -7,6 +7,9 @@ public class Profile {
 	private long profile_picture_id; 
 	private String about_you; 
 	private String hometown;
+	private String current_city;
+	private String email_id;
+	private String phone_no;
 	private String total_friends;
 
 	public Profile() {
@@ -61,6 +64,30 @@ public class Profile {
 		this.hometown = hometown;
 	}
 
+	public String getCurrent_city() {
+		return current_city;
+	}
+
+	public void setCurrent_city(String current_city) {
+		this.current_city = current_city;
+	}
+
+	public String getEmail_id() {
+		return email_id;
+	}
+
+	public void setEmail_id(String email_id) {
+		this.email_id = email_id;
+	}
+
+	public String getPhone_no() {
+		return phone_no;
+	}
+
+	public void setPhone_no(String phone_no) {
+		this.phone_no = phone_no;
+	}
+
 	public String getTotal_friends() {
 		return total_friends;
 	}
@@ -74,7 +101,10 @@ public class Profile {
 		return "Profile [profile_id=" + profile_id + ", profile_user_id="
 				+ profile_user_id + ", full_name=" + full_name
 				+ ", profile_picture_id=" + profile_picture_id + ", about_you="
-				+ about_you + ", hometown=" + hometown + ", total_friends="
-				+ total_friends + "]";
+				+ about_you + ", hometown=" + hometown + ", current_city="
+				+ current_city + ", email_id=" + email_id + ", phone_no="
+				+ phone_no + ", total_friends=" + total_friends + "]";
 	}
+
+	 
 }

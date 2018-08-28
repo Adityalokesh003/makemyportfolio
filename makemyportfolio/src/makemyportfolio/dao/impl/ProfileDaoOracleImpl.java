@@ -30,7 +30,7 @@ public class ProfileDaoOracleImpl implements ProfileDao {
 		PreparedStatement preparedStatement=null;
 		try {
 			connection = DataBaseUtil.getConnection();
-			String sql = "INSERT INTO profiles(profile_id,profile_user_id,full_name,profile_picture_id,about_you,hometown,total_friends)VALUES(?,?,?,?,?,?,?)";
+			String sql = "INSERT INTO profiles(profile_id,profile_user_id,full_name,profile_picture_id,about_you,hometown,current_city,email_id,phone_no,total_friends)VALUES(?,?,?,?,?,?,?,?,?,?)";
 			preparedStatement = connection.prepareStatement(sql);
 			long profile_id  = getNewID(connection);
 			preparedStatement.setLong(1, profile_id);
@@ -39,7 +39,10 @@ public class ProfileDaoOracleImpl implements ProfileDao {
 			preparedStatement.setLong(4,profile.getProfile_picture_id());
 			preparedStatement.setString(5,profile.getAbout_you());
 			preparedStatement.setString(6,profile.getHometown());
-			preparedStatement.setString(7,profile.getTotal_friends());
+			preparedStatement.setString(7,profile.getCurrent_city());
+			preparedStatement.setString(8,profile.getEmail_id());
+			preparedStatement.setString(9,profile.getPhone_no());
+			preparedStatement.setString(10,profile.getTotal_friends());
 
 			int result  = preparedStatement.executeUpdate();
 			if(result==1){
@@ -79,6 +82,9 @@ public class ProfileDaoOracleImpl implements ProfileDao {
 				profile.setProfile_picture_id(resultSet.getLong("profile_picture_id"));
 				profile.setAbout_you(resultSet.getString("about_you"));
 				profile.setHometown(resultSet.getString("hometown"));
+				profile.setCurrent_city(resultSet.getString("current_city"));
+				profile.setEmail_id(resultSet.getString("email_id"));
+				profile.setPhone_no(resultSet.getString("phone_no"));
 				profile.setTotal_friends(resultSet.getString("total_friends"));
 			}
 
@@ -118,6 +124,9 @@ public class ProfileDaoOracleImpl implements ProfileDao {
 				profile.setProfile_picture_id(resultSet.getLong("profile_picture_id"));
 				profile.setAbout_you(resultSet.getString("about_you"));
 				profile.setHometown(resultSet.getString("hometown"));
+				profile.setCurrent_city(resultSet.getString("current_city"));
+				profile.setEmail_id(resultSet.getString("email_id"));
+				profile.setPhone_no(resultSet.getString("phone_no"));
 				profile.setTotal_friends(resultSet.getString("total_friends"));
 				 
 			}
@@ -161,6 +170,9 @@ public class ProfileDaoOracleImpl implements ProfileDao {
 				profile.setProfile_picture_id(resultSet.getLong("profile_picture_id"));
 				profile.setAbout_you(resultSet.getString("about_you"));
 				profile.setHometown(resultSet.getString("hometown"));
+				profile.setCurrent_city(resultSet.getString("current_city"));
+				profile.setEmail_id(resultSet.getString("email_id"));
+				profile.setPhone_no(resultSet.getString("phone_no"));
 				profile.setTotal_friends(resultSet.getString("total_friends"));
 				profileList.add(profile);
 			}
@@ -202,6 +214,9 @@ public class ProfileDaoOracleImpl implements ProfileDao {
 				profile.setProfile_picture_id(resultSet.getLong("profile_picture_id"));
 				profile.setAbout_you(resultSet.getString("about_you"));
 				profile.setHometown(resultSet.getString("hometown"));
+				profile.setCurrent_city(resultSet.getString("current_city"));
+				profile.setEmail_id(resultSet.getString("email_id"));
+				profile.setPhone_no(resultSet.getString("phone_no"));
 				profile.setTotal_friends(resultSet.getString("total_friends"));
 				profileList.add(profile);
 			}
@@ -228,13 +243,16 @@ public class ProfileDaoOracleImpl implements ProfileDao {
 		PreparedStatement preparedStatement=null;
 		try {
 			connection = DataBaseUtil.getConnection();
-			String sql = "UPDATE profiles SET full_name=?,about_you=?,hometown=?,total_friends=? WHERE profile_user_id=?";
+			String sql = "UPDATE profiles SET full_name=?,about_you=?,hometown=?,current_city = ?,email_id = ?,phone_no =? ,total_friends=? WHERE profile_user_id=?";
 			preparedStatement  =connection.prepareStatement(sql);
 			preparedStatement.setString(1, profile.getFull_name());
 			preparedStatement.setString(2,profile.getAbout_you());
 			preparedStatement.setString(3,profile.getHometown());
-			preparedStatement.setString(4,profile.getTotal_friends());
-			preparedStatement.setLong(5, profile_user_id);
+			preparedStatement.setString(4,profile.getCurrent_city());
+			preparedStatement.setString(5,profile.getEmail_id());
+			preparedStatement.setString(6,profile.getPhone_no());
+			preparedStatement.setString(7,profile.getTotal_friends());
+			preparedStatement.setLong(8, profile_user_id);
 			int result  = preparedStatement.executeUpdate();
 			if(result==1){
 				isUpdated =true;

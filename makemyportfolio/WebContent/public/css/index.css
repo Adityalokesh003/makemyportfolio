@@ -1,4 +1,71 @@
 body {
-    font-family: "Lato", sans-serif;
+	font-family: "Lato", sans-serif;
 }
 
+.homepage {
+	margin-top: 100px ;
+	background: #747272;
+}
+
+.post-section {
+	background:#fff;
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+	border: 2px solid grey;
+	padding: 10px;
+	border-radius: 4px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.post-header {
+	flex: 1 1 100%;
+	display: flex;
+	align-items: center;
+}
+
+.post-header .author-pic {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin-left: 10px;
+}
+
+
+.post-author {
+	padding: 10px;
+	width: 400px;
+}
+
+.post-header .post-author>p>a {
+	font-size: 1.5em;
+}
+
+.post-header .post-menu {
+	
+}
+
+.post-header .post-menu i {
+	font-size: 2em;
+	color: grey;
+	padding: 0 10px;
+}
+
+.post-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.post-content img {
+	width: 100%;
+}
+
+.post-footer {
+	display: flex;
+	justify-content: space-around;
+}
+
+.post-footer a{
+	font-size: 1.4em;
+}

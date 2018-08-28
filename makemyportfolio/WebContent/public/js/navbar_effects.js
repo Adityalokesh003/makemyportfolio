@@ -18,6 +18,14 @@ for (i = 0; i < dropdown.length; i++) {
 		}
 	});
 }
+ 
+$(".accordion-active" ).accordion({
+	active:0,animate:400,collapsible:true
+});
+$(".accordion" ).accordion({
+	animate:400,collapsible:true
+});
+ 	 
 
  
 //var prevScrollpos = window.pageYOffset;

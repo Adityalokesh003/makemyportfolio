@@ -80,9 +80,8 @@ public class UserDaoOracleImpl implements UserDao {
 		User storedUser = getByUsername(user_name);
 		if(storedUser!=null){
 			String storedPassword = storedUser.getPassword();
-			if(hashedPassword.equals(storedPassword.trim())){
+			if(hashedPassword.equals(storedPassword)){
 				isAuthenticated = true;
-
 			}
 		}
 		return isAuthenticated;

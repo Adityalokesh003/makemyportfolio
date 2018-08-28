@@ -1,19 +1,22 @@
 create table users (
 user_id number(10) primary key,
 user_name varchar2(30) unique not null,
-password char(64) not null
+password varchar2(64) not null
 );
 create table profile_pictures (
 id number(10) primary key,
-picture_filename varchar2(255) not null,
+picture_filename varchar2(255) not null
 );
 create table profiles (
 profile_id number(10) primary key,
 profile_user_id number(10) unique not null,
 full_name varchar2(255) not null,
 profile_picture_id number(10) unique,
-about_you varchar2(255),
+about_you varchar2(255)not null,
 hometown varchar2(50),
+current_city varchar2(50),
+email_id varchar2(50) not null unique,
+phone_no varchar2(12) not null unique, 
 total_friends number(4) check (total_friends <= 5000),
 constraint profile_fk1 foreign key (profile_user_id ) references users(user_id),
 constraint profile_fk2 foreign key (profile_picture_id ) references profile_pictures(id)
@@ -35,8 +38,8 @@ constraint educational_info_fk1 foreign key (education_profile_id)references pro
 create table technical_info(
 id number(10) primary key,
 tech_profile_id number(10) not null,
-programming_languages varchar2(255),
-scripting_languages varchar2(255),
+programming_languages varchar2(1024),
+web_technologies varchar2(1024),
 os_known varchar2(255),
 databases_known varchar2(255),
 constraint tech_info_fk1 foreign key (tech_profile_id) references profiles(profile_id)
@@ -66,9 +69,9 @@ constraint friends_fk2 foreign key (friend_profile_id) references profiles(profi
 );
 
 
-create table portifolios(
-portifolio_id number(10) primary key,
-portifolio_profile_id number(10) unique not null,
+create table portfolios(
+portfolio_id number(10) primary key,
+portfolio_profile_id number(10) unique not null,
 about_yourself varchar2(255) not null,
 strengths varchar2(255) not null,
 weaknesses varchar2(255) not null,
@@ -76,17 +79,17 @@ interests varchar2(255) not null,
 achievements varchar2(255),
 career_objective varchar2(255),
 links varchar2(255),
-constraint portifolio_fk1 foreign key (portifolio_profile_id) references profiles(profile_id)
+constraint portfolio_fk1 foreign key (portfolio_profile_id) references profiles(profile_id)
 );
 
 create table projects (
  project_id number(10) primary key,
- project_portifolio_id not null,
+ project_portfolio_id not null,
  project_title varchar2(255) not null,
  technologies_used varchar2(255) ,
  project_description varchar2(255) ,
  project_duration varchar2(50),
- constraint project_fk1 foreign key (project_portifolio_id) references portifolios(portifolio_id)
+ constraint project_fk1 foreign key (project_portfolio_id) references portfolios(portfolio_id)
 );
 
 create table posts(

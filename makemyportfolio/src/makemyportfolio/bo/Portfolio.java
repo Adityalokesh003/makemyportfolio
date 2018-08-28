@@ -1,8 +1,8 @@
 package makemyportfolio.bo;
 
-public class Portifolio {
-	private long portifolio_id;
-	private long portifolio_profile_id;
+public class Portfolio {
+	private long portfolio_id;
+	private long portfolio_profile_id;
 	private String about_yourself;
 	private String strengths;
 	private String weaknesses;
@@ -12,28 +12,28 @@ public class Portifolio {
 	private String links;
 	
 	
-	public Portifolio() {
+	public Portfolio() {
 		 
 	}
 
 
-	public long getPortifolio_id() {
-		return portifolio_id;
+	public long getPortfolio_id() {
+		return portfolio_id;
 	}
 
 
-	public void setPortifolio_id(long portifolio_id) {
-		this.portifolio_id = portifolio_id;
+	public void setPortfolio_id(long portfolio_id) {
+		this.portfolio_id = portfolio_id;
 	}
 
 
-	public long getPortifolio_profile_id() {
-		return portifolio_profile_id;
+	public long getPortfolio_profile_id() {
+		return portfolio_profile_id;
 	}
 
 
-	public void setPortifolio_profile_id(long portifolio_profile_id) {
-		this.portifolio_profile_id = portifolio_profile_id;
+	public void setPortfolio_profile_id(long portfolio_profile_id) {
+		this.portfolio_profile_id = portfolio_profile_id;
 	}
 
 
@@ -109,8 +109,8 @@ public class Portifolio {
 
 	@Override
 	public String toString() {
-		return "Portifolio [portifolio_id=" + portifolio_id
-				+ ", portifolio_profile_id=" + portifolio_profile_id
+		return "Portfolio [portfolio_id=" + portfolio_id
+				+ ", portfolio_profile_id=" + portfolio_profile_id
 				+ ", about_yourself=" + about_yourself + ", strengths="
 				+ strengths + ", weaknesses=" + weaknesses + ", interests="
 				+ interests + ", achievements=" + achievements

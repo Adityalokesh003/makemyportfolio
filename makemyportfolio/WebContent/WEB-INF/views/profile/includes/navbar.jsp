@@ -1,7 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
  <%@include file="../../includes/header.jsp"%>
- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
  <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/public/css/profile.css">
 <%@include file="../../includes/navbar.jsp"%>   
@@ -10,23 +8,27 @@
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-container">
-    <a href="#">View Profile</a>
-    <a href="#">Edit Profile</a>
+    <a href="/makemyportfolio/profile">View</a>
+    <a href="/makemyportfolio/profile/new">Create/Add</a>
+    <a href="/makemyportfolio/profile/edit">Edit</a>
   </div>
   <button class="dropdown-btn">Portfolio 
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-container">
   
-    <a href="#">View Portfolio</a>
-    <a href="#">Edit Portfolio</a>
+    <a href="/makemyportfolio/portfolio">View</a>
+    <a href="/makemyportfolio/portfolio/new">Create/Add</a>
+    <a href="/makemyportfolio/portfolio/edit">Edit</a>
   </div>
   <button class="dropdown-btn">Projects 
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-container">
-    <a href="#">View Project</a>
-    <a href="#">Add Project</a>
+    <a href="/makemyportfolio/profile/project">View</a>
+    <a href="/makemyportfolio/profile/project/new">Add</a>
+    <a href="/makemyportfolio/profile/project/edit">Edit</a>
   </div>
   <a href="#contact" class="profile-sidebar-link">Friends</a>
+   
 </div>

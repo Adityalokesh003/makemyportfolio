@@ -28,13 +28,13 @@ public class TechnicalInfoDaoOracleImpl implements TechnicalInfoDao {
 		PreparedStatement preparedStatement=null;
 		try {
 			connection = DataBaseUtil.getConnection();
-			String sql = "INSERT INTO technical_info(id,tech_profile_id,programming_languages,scripting_languages,os_known,databases_known)VALUES(?,?,?,?,?,?)";
+			String sql = "INSERT INTO technical_info(id,tech_profile_id,programming_languages,web_technologies,os_known,databases_known)VALUES(?,?,?,?,?,?)";
 			preparedStatement = connection.prepareStatement(sql);
 			long id  = getNewID(connection);
 			preparedStatement.setLong(1, id);
 			preparedStatement.setLong(2, technicalInfo.getTech_profile_id());
 			preparedStatement.setString(3, technicalInfo.getProgramming_languages());
-			preparedStatement.setString(4, technicalInfo.getScripting_languages());
+			preparedStatement.setString(4, technicalInfo.getWeb_technologies());
 			preparedStatement.setString(5, technicalInfo.getOs_known());
 			preparedStatement.setString(6, technicalInfo.getDatabases_known());
 			
@@ -72,7 +72,7 @@ public class TechnicalInfoDaoOracleImpl implements TechnicalInfoDao {
 				technicalInfo.setId(resultSet.getLong("id")); 
 				technicalInfo.setTech_profile_id(resultSet.getLong("tech_profile_id"));
 				technicalInfo.setProgramming_languages(resultSet.getString("programming_languages"));
-				technicalInfo.setScripting_languages(resultSet.getString("scripting_languages"));
+				technicalInfo.setWeb_technologies(resultSet.getString("web_technologies"));
 				technicalInfo.setOs_known(resultSet.getString("os_known"));
 				technicalInfo.setDatabases_known(resultSet.getString("databases_known"));
 				
@@ -112,7 +112,7 @@ public class TechnicalInfoDaoOracleImpl implements TechnicalInfoDao {
 				technicalInfo.setId(resultSet.getLong("id")); 
 				technicalInfo.setTech_profile_id(resultSet.getLong("tech_profile_id"));
 				technicalInfo.setProgramming_languages(resultSet.getString("programming_languages"));
-				technicalInfo.setScripting_languages(resultSet.getString("scripting_languages"));
+				technicalInfo.setWeb_technologies(resultSet.getString("web_technologies"));
 				technicalInfo.setOs_known(resultSet.getString("os_known"));
 				technicalInfo.setDatabases_known(resultSet.getString("databases_known"));
 				technicalInfos.add(technicalInfo);			}
@@ -139,10 +139,10 @@ public class TechnicalInfoDaoOracleImpl implements TechnicalInfoDao {
 		PreparedStatement preparedStatement=null;
 		try {
 			connection = DataBaseUtil.getConnection();
-			String sql = "UPDATE technical_info SET programming_languages=?,scripting_languages=?,os_known=?,databases_known=? WHERE id=?";
+			String sql = "UPDATE technical_info SET programming_languages=?,web_technologies=?,os_known=?,databases_known=? WHERE id=?";
 			preparedStatement  =connection.prepareStatement(sql);
 			preparedStatement.setString(1, technicalInfo.getProgramming_languages());
-			preparedStatement.setString(2, technicalInfo.getScripting_languages());
+			preparedStatement.setString(2, technicalInfo.getWeb_technologies());
 			preparedStatement.setString(3, technicalInfo.getOs_known());
 			preparedStatement.setString(4, technicalInfo.getDatabases_known());
 			preparedStatement.setLong(5, id);

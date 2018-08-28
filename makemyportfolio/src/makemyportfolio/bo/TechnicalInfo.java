@@ -4,7 +4,7 @@ public class TechnicalInfo {
 	private long id;
 	private long tech_profile_id;
 	private String programming_languages;
-	private String scripting_languages;
+	private String web_technologies;
 	private String os_known;
 	private String databases_known ;
 	public TechnicalInfo() {
@@ -28,11 +28,11 @@ public class TechnicalInfo {
 	public void setProgramming_languages(String programming_languages) {
 		this.programming_languages = programming_languages;
 	}
-	public String getScripting_languages() {
-		return scripting_languages;
+	public String getWeb_technologies() {
+		return web_technologies;
 	}
-	public void setScripting_languages(String scripting_languages) {
-		this.scripting_languages = scripting_languages;
+	public void setWeb_technologies(String web_technologies) {
+		this.web_technologies = web_technologies;
 	}
 	public String getOs_known() {
 		return os_known;
@@ -50,8 +50,10 @@ public class TechnicalInfo {
 	public String toString() {
 		return "TechnicalInfo [id=" + id + ", tech_profile_id="
 				+ tech_profile_id + ", programming_languages="
-				+ programming_languages + ", scripting_languages="
-				+ scripting_languages + ", os_known=" + os_known
+				+ programming_languages + ", web_technologies="
+				+ web_technologies + ", os_known=" + os_known
 				+ ", databases_known=" + databases_known + "]";
 	}
+	 
+	 
 }

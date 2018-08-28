@@ -4,6 +4,7 @@
  margin: 0;
  padding: 0;
  box-sizing: border-box;
+ font-family:  Gotham;
 
 }
 
@@ -16,7 +17,7 @@ body {
   background-size: cover;
   background-position: center ;
   box-sizing: border-box;
-  font-family:  Times;
+  font-family:  Georgia;
 }
 a{
 	text-decoration: none;
